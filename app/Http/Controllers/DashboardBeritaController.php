@@ -29,7 +29,7 @@ class DashboardBeritaController extends Controller
      */
     public function create()
     {
-        return view('dashboard.berita.create', [
+        return view('admin.dashboard.berita.create', [
             'kategori' => MasterKategori::all()
         ]);
     }
