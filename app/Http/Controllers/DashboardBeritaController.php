@@ -45,13 +45,13 @@ class DashboardBeritaController extends Controller
         $validateData = $request->validate([
             'judul_berita' => 'required|max:255',
             'slug' => 'required',
-            'kategori_id' => 'required',
+            'master_kategori_id' => 'required',
             'isi_berita' => 'required',
             'foto' => 'image|file|max:1024'
         ]);
-
+        
         $validateData['excerpt'] = Str::limit(strip_tags($request->isi_berita), 100);
-
+        
         MasterBerita::create($validateData);
         return redirect('/dashboard/berita')->with('success', 'Berita baru berhasil ditambahkan!');
     }

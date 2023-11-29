@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <label for="category">Kategori</label>
-                        <select name="kategori_id" id="kategori_id" class="custom-select rounded-0">
+                        <select name="master_kategori_id" id="kategori_id" class="custom-select rounded-0">
                             @foreach ($kategori as $kategori)
                                 <option value="{{ $kategori->id }}">{{ $kategori->nama }}</option>
                             @endforeach
